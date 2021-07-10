@@ -8,6 +8,9 @@ module.exports = function (app) {
 
   app.route('/api/translate')
     .post((req, res) => {
-      
+      const { locale, text } = req.body;
+      const translation = translator.translate(locale, text);
+
+      res.status(200).json(translator.translate(translation));
     });
 };
