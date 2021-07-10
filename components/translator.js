@@ -9,6 +9,12 @@ class Translator {
 
     return null;
   }
+
+  highlight(locale, text) {
+    console.log(locale, text);
+
+    return null;
+  }
 }
 
 module.exports = Translator;
