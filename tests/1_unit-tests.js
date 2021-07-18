@@ -73,8 +73,8 @@ suite('Unit Tests', () => {
     const expected = 'Like a high tech Heath Robinson device.';
 
     assert.equal(translation, expected);
-
-    done();
+ 
+    done();  
   });
 
   test('Translate "To play hooky means to skip class or work." to British English', function (done) {
@@ -118,7 +118,7 @@ suite('Unit Tests', () => {
     const text = 'Lunch is at 12:15 today.';
     
     const translation = translator.translate(locale, text);
-    const expected = '"Lunch is at <span class=\"highlight\">12.15 today."';
+    const expected = 'Lunch is at 12.15 today.';
 
     assert.equal(translation, expected);
 
@@ -178,7 +178,7 @@ suite('Unit Tests', () => {
     const text = 'I had a bicky then went to the chippy.';
     
     const translation = translator.translate(locale, text);
-    const expected = '"I had a <span class=\"highlight\">cookie then went to the <span class=\"highlight\">fish-and-chip shop."';
+    const expected = 'I had a cookie then went to the fish-and-chip shop.';
 
     assert.equal(translation, expected);
 
@@ -292,4 +292,5 @@ suite('Unit Tests', () => {
 
     done();
   });
+
 });

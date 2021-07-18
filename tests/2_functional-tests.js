@@ -16,7 +16,7 @@ suite('Functional Tests', () => {
         locale: 'american-to-british',
         text: 'Mangoes are my favorite fruit.',
       };
-      const expected = 'Mangoes are my favourite fruit.';
+      const expected = 'Mangoes are my <span class="highlight">favourite</span> fruit.';
 
       chai
         .request(server)
@@ -40,7 +40,7 @@ suite('Functional Tests', () => {
         locale: 'invalid-locale-field',
         text: 'Mangoes are my favorite fruit.',
       };
-      const error = 'Required field(s) missing';
+      const error = 'Invalid value for locale field';
 
       chai
         .request(server)
@@ -101,7 +101,7 @@ suite('Functional Tests', () => {
         locale: 'american-to-british',
         text: '',
       };
-      const error = 'Required field(s) missing';
+      const error = 'No text to translate';
 
       chai
         .request(server)
